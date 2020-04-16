@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::get('/biodata','BiodataController@index')->name('biodata');
+Route::get('/dashboard','DashboardController@index')->name('dashboard');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('survey','SurveyController');
